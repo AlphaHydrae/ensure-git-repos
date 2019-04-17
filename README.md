@@ -18,3 +18,23 @@ Options:
   --no-color      disable colors
   -v, --version   print the version
 ```
+
+
+
+## Installation
+
+With curl:
+
+```
+curl -sSLo /usr/local/bin/ensure-git-repos \
+  https://raw.githubusercontent.com/AlphaHydrae/ensure-git-repos/v1.0.0/ensure-git-repos.sh && \
+  chmod +x /usr/local/bin/ensure-git-repos
+```
+
+With wget:
+
+```
+wget -O /usr/local/bin/ensure-git-repos \
+  https://raw.githubusercontent.com/AlphaHydrae/ensure-git-repos/v1.0.0/ensure-git-repos.sh && \
+  chmod +x /usr/local/bin/ensure-git-repos
+```
