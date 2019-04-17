@@ -23,6 +23,12 @@ Options:
 
 ## Installation
 
+With [Homebrew][brew]:
+
+```
+brew install alphahydrae/tools/ensure-git-repos
+```
+
 With curl:
 
 ```
@@ -38,3 +44,7 @@ wget -O /usr/local/bin/ensure-git-repos \
   https://raw.githubusercontent.com/AlphaHydrae/ensure-git-repos/v1.0.0/ensure-git-repos.sh && \
   chmod +x /usr/local/bin/ensure-git-repos
 ```
+
+
+
+[brew]: https://brew.sh/
