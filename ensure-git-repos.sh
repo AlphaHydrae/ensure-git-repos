@@ -48,7 +48,7 @@ function check_dir() {
   fi
 
   if test -d "$DIR"; then
-    cd "$DIR"
+    pushd "$DIR" &>/dev/null
 
     if ! git rev-parse &>/dev/null; then
       IS_REPO=
@@ -58,13 +58,15 @@ function check_dir() {
         for FILE in *; do
           [ "$FILE" == ".DS_Store" ] && continue
           ((CHILD_COUNT++))
-          if check_dir "$DIR/$FILE" "$MAX_DEPTH" $((DEPTH+1)); then
+          if check_dir "$PWD/$FILE" "$MAX_DEPTH" $((DEPTH+1)); then
             ((CHILD_REPOS_COUNT++))
           fi
         done
         shopt -u dotglob
       fi
     fi
+
+    popd &>/dev/null
   else
     IS_DIR=
   fi
